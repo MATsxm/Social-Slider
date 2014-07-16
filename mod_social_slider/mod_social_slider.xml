@@ -89,7 +89,7 @@
 					<option value="0">JJ_OFF</option>
 					<option value="1">JJ_ON</option>
 				</field>
-				<field name="steam_link" default="http://steam.com" type="text" size="50" label="JJ_SOCIAL_SLIDER_STEAM_LINK" description="JJ_SOCIAL_SLIDER_STEAM_LINK_DESC" />
+				<field name="steam_link" default="http://steampowered.com" type="text" size="50" label="JJ_SOCIAL_SLIDER_STEAM_LINK" description="JJ_SOCIAL_SLIDER_STEAM_LINK_DESC" />
 			</fieldset>
 			
 			<fieldset name="LastFM">	
