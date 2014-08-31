@@ -56,26 +56,20 @@ class JFormFieldSorting extends JFormField
 			'sort_19' => JText::_('COM_MODULES_CUSTOM4_FIELDSET_LABEL'),
 			'sort_20' => JText::_('COM_MODULES_CUSTOM5_FIELDSET_LABEL')
 		);
-		$document = JFactory::getDocument();
-
-		if (version_compare(JVERSION, '3.0.0', 'ge'))
+		$doc = JFactory::getDocument();
+		
+		
+		// Check and inject jQuery onto the page
+		if (!JFactory::getApplication()->get('jquery'))
 		{
-			JHtml::_('jquery.framework');
-		}
-		else
-		{
-			if (!JFactory::getApplication()->get('jquery'))
-			{
-				JFactory::getApplication()->set('jquery', true);
-				JHtml::_('script', 'mod_social_slider/jquery.js', false, true);
-			}
+			JFactory::getApplication()->set('jquery', true);
+			JHtml::_('script', 'mod_social_slider/jquery.js', false, true);
 		}
 
 		// Next insert the jQuery plugin
 		JHtml::_('script', 'mod_social_slider/jquery-sortable.js', false, true);
 
-		// Now initialize the plugin
-		$document->addScriptDeclaration('
+		// Now initialize the plugin		$doc->addScriptDeclaration('
 		jQuery(document).ready(function($) {
 			var group = $("#sortable").sortable({
 				pullPlaceholder: false,
@@ -91,8 +85,7 @@ class JFormFieldSorting extends JFormField
 		');
 
 		// Add in relevant styles
-		$icon = JUri::root() . 'media/mod_social_slider/icons/';
-		$document->addStyleDeclaration('
+		$icon = JUri::root() . 'media/mod_social_slider/icons/';		$doc->addStyleDeclaration('
 			body.dragging, body.dragging * {
 			  cursor: move !important;
 			}
