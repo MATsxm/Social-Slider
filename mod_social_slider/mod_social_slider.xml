@@ -244,6 +244,8 @@
 					<option value="1">JJ_SOCIAL_SLIDER_TAB_SAME</option>
 				</field>
                 <field name="sorting" type="Sorting" label="JJ_SOCIAL_SLIDER_SORTING" description="JJ_SOCIAL_SLIDER_SORTING_DESC" id="order" />
+				
+				<field name="pro" type="pro" label="" />
 			</fieldset>
 		</fields>
 	</config>
