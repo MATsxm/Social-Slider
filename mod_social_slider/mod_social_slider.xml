@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-3.0.html</license> 
 	<authorEmail>admin@joomjunk.co.uk</authorEmail> 
 	<authorUrl>http://www.joomjunk.co.uk</authorUrl> 
-	<version>1.5.5</version>
+	<version>1.5.7</version>
 	
 	<files>
 		<filename module="mod_social_slider">mod_social_slider.php</filename>
@@ -32,6 +32,10 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_social_slider.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_social_slider.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_social_slider.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_social_slider.sys.ini</language>
+		<language tag="nl-BE">nl-BE/nl-BE.mod_social_slider.ini</language>
+		<language tag="nl-BE">nl-BE/nl-BE.mod_social_slider.sys.ini</language>
 	</languages>
 
 	<config>
@@ -240,6 +244,8 @@
 					<option value="1">JJ_SOCIAL_SLIDER_TAB_SAME</option>
 				</field>
                 <field name="sorting" type="Sorting" label="JJ_SOCIAL_SLIDER_SORTING" description="JJ_SOCIAL_SLIDER_SORTING_DESC" id="order" />
+				
+				<field name="pro" type="pro" label="" />
 			</fieldset>
 		</fields>
 	</config>
